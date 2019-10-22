@@ -1,5 +1,5 @@
 {
-  "name": "redux-little-router",
+  "name": "redux-little-router-updated",
   "version": "15.1.2",
   "description": "A barebones routing solution for Redux applications.",
   "main": "lib/index.js",

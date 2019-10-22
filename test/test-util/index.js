@@ -1,5 +1,5 @@
 /* eslint-disable new-cap */
-import createMemoryHistory from 'history/createMemoryHistory';
+import { createMemoryHistory } from 'history';
 import { fromJS } from 'immutable';
 import { applyMiddleware, createStore, compose } from 'redux';
 
@@ -107,6 +107,9 @@ export const setupStoreForEnv = (
   return createStore(
     combineReducers({ router: reducer }),
     initialState,
-    compose(enhancer, applyMiddleware(middleware))
+    compose(
+      enhancer,
+      applyMiddleware(middleware)
+    )
   );
 };
